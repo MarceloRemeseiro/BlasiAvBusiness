@@ -1,0 +1,59 @@
+---
+const trabajos = [
+  {
+    imgSrc: "/assets/cup.jpg",
+    altText: "LALIGA FC PRO 24 CUP",
+    text: "LALIGA FC PRO 24 CUP",
+  },
+  {
+    imgSrc: "/assets/slo.jpg",
+    altText: "Descripción de la imagen 2",
+    text: "FINAL SUPERLIGA ORANGE BILBAO",
+  },
+  {
+    imgSrc: "/assets/valorant.jpg",
+    altText: "Descripción de la imagen 3",
+    text: "VALORANT CCIB BARCELONA",
+  },
+  {
+    imgSrc: "/assets/gy10rubius.jpg",
+    altText: "Descripción de la imagen 4",
+    text: "RUBIUS BATLE ROYALE",
+  },
+  {
+    imgSrc: "/assets/elibertadores.png",
+    altText: "Descripción de la imagen 4",
+    text: "CONMEBOL eLIBERTADORES",
+  },
+  {
+    imgSrc: "/assets/motogp.png",
+    altText: "Descripción de la imagen 4",
+    text: "MOTGPESPORT CHAMPIONCHIP",
+  },
+  
+];
+---
+
+<h1 class="text-center text-blanco font-bold text-3xl my-8">
+  ALGUNOS TRABAJOS
+</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 mx-auto">
+  {
+    trabajos.map((trabajo) => (
+      <a href={trabajo.imgSrc} target="_blank" rel="noopener noreferrer">
+        <div class="relative group overflow-hidden  cursor-pointer">
+          <img
+            class="h-auto max-w-full aspect-video border border-white transition-transform duration-700 transform group-hover:scale-110 group-hover:brightness-75"
+            src={trabajo.imgSrc}
+            alt={trabajo.altText}
+          />
+          <div class="absolute inset-0 flex items-center justify-center ">
+            <h2 class="p-4 bg-black bg-opacity-80 text-white border border-white">
+              {trabajo.text}
+            </h2>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
